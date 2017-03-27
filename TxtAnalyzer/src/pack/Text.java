@@ -1,8 +1,9 @@
 package pack;
 public class Text {
 
-	String fileLoc;
-	Metrics metrics;
+	private String txt;
+	private Metrics metrics;
+	private String fileLoc;
 
 	public void setTxt(String txt) {
 		this.fileLoc = txt;

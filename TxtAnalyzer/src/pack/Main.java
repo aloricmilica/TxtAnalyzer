@@ -22,21 +22,18 @@ public class Main {
 		
 		Metrics res = c.calculate(pp);
 
-		System.out.println("Broj reci u tekstu je:");
-		System.out.println(res.numWords);
-		System.out.println("Broj recenica u tekstu je:");
-		System.out.println(res.numSentences);
-		System.out.println("Broj paragrafa u tekstu je:");
-		System.out.println(res.numParagraphs);
-		System.out.println("Prosecan broj reci po recenici u tekstu je:");
-		System.out.println(res.wordsPerSentence);
-		System.out.println("Prosecan broj slova po reci u tekstu je:");
-		System.out.println(res.lettersPerWord);
+		System.out.println("The number of words in the text are: " + res.numWords);
+		System.out.println("The number of sentences in the text are: " + res.numSentences);
+		System.out.println("The number of paragraphs in the text are: " + res.numParagraphs);
+		System.out.println("The average no of words per sentence is: " + res.wordsPerSentence);
+		System.out.println("The average no of letters per word is: " + res.lettersPerWord);
+		System.out.println("The number of word types in the text are: " + res.numTypes);
+		System.out.println("Type token ratio is: " + res.TTR);
+		System.out.println("The number of determiners is: " + res.determiners);
 		
-
-		Text t = new Text();
-		t.fileLoc = pp.resLocation;
-		t.metrics = res;
+//		Text t = new Text();
+//		t.fileLoc = pp.resLocation;
+//		t.metrics = res;
 
 	}
 
