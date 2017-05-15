@@ -1,4 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package pack;
+
 public class Metrics {
 
 	int numWords;
@@ -18,6 +24,31 @@ public class Metrics {
 	int connectives;
 	int negations;
 	int future;
+
+        public Metrics(int numWords, int numTypes, double TTR, double 
+                lettersPerWord, int numParagraphs, int numSentences, double 
+                        wordsPerSentence, int determiners, int demonstratives, 
+                        int numPronouns, int firstPersonPr, int secondPersonPr, 
+                        int thirdPersonPr, int conjuncts, int connectives, int 
+                                negations, int future) {
+            this.numWords = numWords;
+            this.numTypes = numTypes;
+            this.TTR = TTR;
+            this.lettersPerWord = lettersPerWord;
+            this.numParagraphs = numParagraphs;
+            this.numSentences = numSentences;
+            this.wordsPerSentence = wordsPerSentence;
+            this.determiners = determiners;
+            this.demonstratives = demonstratives;
+            this.numPronouns = numPronouns;
+            this.firstPersonPr = firstPersonPr;
+            this.secondPersonPr = secondPersonPr;
+            this.thirdPersonPr = thirdPersonPr;
+            this.conjuncts = conjuncts;
+            this.connectives = connectives;
+            this.negations = negations;
+            this.future = future;
+        }
 
 	public int getNumWords() {
 		return numWords;
@@ -154,5 +185,14 @@ public class Metrics {
 	public void setFuture(int future) {
 		this.future = future;
 	}
+
+    @Override
+    public String toString() {
+        return  "," +numWords +","+ numTypes +","+  TTR +","+  lettersPerWord +","+ 
+                numParagraphs +","+ numSentences +","+ wordsPerSentence +","+  
+                determiners +","+ demonstratives +","+ numPronouns +","+ 
+                firstPersonPr +","+ secondPersonPr +","+ thirdPersonPr +","+ 
+                conjuncts +","+ connectives +","+ negations +","+ future;
+    }
 
 }
