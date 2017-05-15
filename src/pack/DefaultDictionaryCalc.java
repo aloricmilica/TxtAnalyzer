@@ -55,8 +55,6 @@ public class DefaultDictionaryCalc extends AbstractCalculator {
             Scanner s = new Scanner(new FileReader(ifc.getInFilePath()));
             StringBuilder sb = new StringBuilder();
             
-            
-            //posebna metoda sa dva 
 	    while (s.hasNextLine()) {
                 String line = s.nextLine();
                 sb.append(line);
