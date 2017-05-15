@@ -38,8 +38,8 @@ Output file location is represented in the first column, while the calculated me
 - first person pronouns (i	me	we	us	my	our	myself	ourselves)
 - second person pronouns (you your  yourself  yourselves)
 - third person pronouns (he	she	her	him	his	they	them	their	himself	herself	themselves)
-- conjuncts
-- connectives 
+- conjuncts (alternatively	altogether	consequently	conversely...)
+- connectives (a relationship type between different parts of the sentence)
 - negations (no	none	nope	not	nothing	nowhere	*n't) 
 - future (will *'ll)
 
