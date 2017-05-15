@@ -1,7 +1,7 @@
 # Linguistic Metrics Analyzer - LMA
 ## Introduction
 The purpose of this final project was creating a software library which calculates the linguistic metrics of a textual file, such as
-the number of paraghraps, pronouns, negation, future etc. All in all, this application calculates all the metrics that can be calculated by Simple Natural Language Processing tool (SiNLP). The metrics which needed to be analyzed were determined based on the paper: *Crossley, S. A., Allen, L. K., Kyle, K., & McNamara, D.S. (2014). Analyzing discourse processing using a simple natural language processing tool (SiNLP). Discourse Processes, 51(5-6), pp. 511-534.2*. 
+the number of paraghraps, pronouns, negations, future etc. All in all, this application calculates all the metrics that can be calculated by Simple Natural Language Processing tool (SiNLP). The metrics which needed to be analyzed were determined based on the paper: *Crossley, S. A., Allen, L. K., Kyle, K., & McNamara, D.S. (2014). Analyzing discourse processing using a simple natural language processing tool (SiNLP). Discourse Processes, 51(5-6), pp. 511-534.2*. 
 
 ## About SiNLP
 SiNLP is a software written in Python programming language which was a role-model for creating this project. It was developped by a group of researches with the support of the Institute for Education Sciences, in order to provide discourse researchers with an additional tool with which to identify and examine the mental representations and processes involved in the production and comprehension of language. 
@@ -18,12 +18,12 @@ Template Pattern was used as a solution to this problem, as it defines the opera
 
 When running the application, users are first required to input certain information about the .txt file they want to analyze and the results file: input file path, output folder path, output file name and optionally custom dictionary file path, before they click the button Calculate. When the calculate() method is called, each of the redefined abstract methods calculates a needed metric, so an object of Metrics class featuring these calculated values is created. In the end, the program assigns these metrics to a new Text class object and creates an output .csv file with information about output file location and all the calculated metrics.
 
-When making and using custom dictionaries, users are advised to only set the values for determiners, demonstratives, all pronouns, first person pronouns, second person pronouns, third person pronouns, negations and future. This is so users can be able to use this software efficiently even with texts written in foreign languages. If users choose to use a custom dictionary, they must first save them as a tab-delimited text file.
+When making and using custom dictionaries, users are advised to only set the values for determiners, demonstratives, all pronouns, first person pronouns, second person pronouns, third person pronouns, negations and future. This is so users could use this software efficiently even with texts written in foreign languages. If users choose to use a custom dictionary, they must first save them as a tab-delimited text file.
 
 
 ### Output file example
 ![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/images/resultsExample.png "Results Example")
-Output file location is represented in the first column, while calculated metrics are:
+Output file location is represented in the first column, while the calculated metrics are:
 - number of words
 - number of types (unique appearances of a word)
 - TTR (Type Token Ratio - the more types there are in comparison to the number of tokens, 
@@ -51,8 +51,12 @@ Stanford CoreNLP provides a set of natural language analysis tools. It can give 
 
 Stanford CoreNLP’s goal is to make it very easy to apply a bunch of linguistic analysis tools to a piece of text. A tool pipeline can be run on a piece of plain text with just two lines of code. Stanford CoreNLP integrates many of Stanford’s NLP tools, including the part-of-speech (POS) tagger, the named entity recognizer (NER), the parser, the coreference resolution system, sentiment analysis, bootstrapped pattern learning, and the open information extraction tools.
 
+Using CoreNLP in this project enabled an easy parsing of sentences, identifying different parts of speech and many more things that were crucial in writing the code for all of the methods that calculate the wanted metrics.
+
 ## Resume
 Linguistic Metrics Analyzer was developped in Java for a final project in Intelligent Systems class.
 This software was built to accurately calculate various linguistic variables in a selected textual file, and to present those results in a table saved as .csv file, which can be vey helpful for text analysis conducted by linguistics as well as for statistical researchers.
 
 The application runs from a simplified GUI, where users first give several I/O information. Then, after clicking on the button *Calculate!*, user gets a message from the app about the outcome of the calculation process. Users can repeat this process and analyze as many text as they want, since the program will pop out a dialog box after every calculation asking if the user wants to analyze another text.
+
+Overall, LMA showed to be more precise in practice in analyzing text than SiNLP. However, there are always ways to optimize an application, so restructuring code in a smarter way and upgrading the graphical interface to a more appealing design wouldn't be a surplus.
