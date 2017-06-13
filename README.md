@@ -12,7 +12,7 @@ SiNLP will also run without a custom list dictionary, and that way it will provi
 
 ## LMA - Software library for text metrics calculation
 ### Class Diagram
-![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/images/ClassDiagram.png "Class Diagram")
+![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/main/resources/ClassDiagram.png "Class Diagram")
 
 Template Pattern was used as a solution to this problem, as it defines the operation algorithm sceleton while leaving some operation steps to be taken by subclasses. In this concrete case, Template Pattern defines the sceleton of calculate() method, while the steps of this algorithm (abstract methods) are redefined by subclasses - DefaultDictionaryCalc or CustomDictionaryCalc. This was done to differentiate the case when users want to run the calculation using a custom dictionary, from the case when they want to use a default one.
 
@@ -22,7 +22,7 @@ When making and using custom dictionaries, users are advised to only set the val
 
 
 ### Output file example
-![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/images/resultsExample.png "Results Example")
+![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/main/resources/resultsExample.png "Results Example")
 Output file location is represented in the first column, while the calculated metrics are:
 - number of words
 - number of types (unique appearances of a word)
