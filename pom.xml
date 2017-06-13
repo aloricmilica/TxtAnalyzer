@@ -21,6 +21,12 @@
             <artifactId>stanford-corenlp</artifactId>
             <version>3.6.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     
     <build>
@@ -55,7 +61,7 @@
                     <outputFilterFile>true</outputFilterFile>
                     <outputFile>.classpath</outputFile>
                 </configuration>
-            </plugin> 
+            </plugin>
         </plugins>
         <filters>
             <filter>.classpath</filter>
