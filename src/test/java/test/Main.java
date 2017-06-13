@@ -22,7 +22,6 @@ public class Main {
                        
                 JFrame main = new CalculatorForm();
                 main.setVisible(true);
-
     }
     
 }

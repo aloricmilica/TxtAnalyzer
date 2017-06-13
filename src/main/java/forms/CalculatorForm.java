@@ -16,13 +16,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Milica
  */
-public class CalculatorForm extends javax.swing.JFrame {
+public class CalculatorForm extends JFrame {
 
     /**
      * Creates new form CalculatorForm
@@ -181,7 +182,7 @@ public class CalculatorForm extends javax.swing.JFrame {
             }
             }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Error in calculating file - you "
-                    + "must enter all the neccessary information!"+e.getMessage());
+                    + "must enter all the neccessary information!");
         }
     }//GEN-LAST:event_jbtnCalculateActionPerformed
 
