@@ -53,12 +53,12 @@
                 </executions>
                 <configuration>
                     <outputFilterFile>true</outputFilterFile>
-                    <outputFile>classpath.properties</outputFile>
+                    <outputFile>.classpath</outputFile>
                 </configuration>
             </plugin> 
         </plugins>
         <filters>
-            <filter>classpath.properties</filter>
+            <filter>.classpath</filter>
         </filters>
         <resources>
             <resource>
