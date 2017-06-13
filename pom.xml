@@ -53,47 +53,12 @@
                 </executions>
                 <configuration>
                     <outputFilterFile>true</outputFilterFile>
-                    <outputFile>${project.build.directory}/classpath.properties</outputFile>
+                    <outputFile>classpath.properties</outputFile>
                 </configuration>
-            </plugin>
-            
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/main/java</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>add-resource</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>add-resource</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <targetPath>resources</targetPath>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            </plugin> 
         </plugins>
         <filters>
-            <filter>${project.build.directory}/classpath.properties</filter>
+            <filter>classpath.properties</filter>
         </filters>
         <resources>
             <resource>
