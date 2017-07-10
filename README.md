@@ -18,6 +18,8 @@ When running the application, users are first required to input certain informat
 
 When making and using custom dictionaries, users are advised to only set the values for determiners, demonstratives, all pronouns, first person pronouns, second person pronouns, third person pronouns, negations and future. This is so users could use this software efficiently even with texts written in foreign languages. If users choose to use a custom dictionary, they must first save them as a tab-delimited text file.
 
+In the resources directory of LMA library, there is an example of a textual file that can be used as an input file for testung the application.
+
 
 ### Output file example
 ![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/main/resources/resultsExample.png "Results Example")
