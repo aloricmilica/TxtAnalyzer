@@ -4,7 +4,7 @@ The purpose of this final project was creating a software library which calculat
 the number of paraghraps, pronouns, negations, future etc. All in all, this application calculates all the metrics that can be calculated by Simple Natural Language Processing tool (SiNLP). The metrics which needed to be analyzed were determined based on the paper: [1]
 
 ## About SiNLP
-SiNLP is a software written in Python programming language which was a role-model for creating this project. It was developped by a group of researches with the support of the Institute for Education Sciences, in order to provide discourse researchers with an additional tool with which to identify and examine the mental representations and processes involved in the production and comprehension of language. 
+SiNLP is a software written in Python programming language which was a role-model for creating this project. It was developped by a group of researches with the support of the Institute for Education Sciences, in order to provide discourse researchers with an additional tool with which to identify and examine the mental representations and processes involved in the production and comprehension of language. [1]
 
 In order to analyze their text, users are first asked from SiNLP GUI to select a custom list dictionary. These custom lists allow users to create their own custom word lists to analyze texts specific to their research questions. Included with SiNLP is a starter custom list dictionary that includes determiners, demonstratives, all pronouns, first person pronouns, second person pronouns, third person pronouns, conjuncts, connectives, negations, and future. After selecting a list dictionary, users select the input (text) files through a file-dialog prompt, choose where they want the output file to be saved, and click a button to process the texts.
 
@@ -45,11 +45,11 @@ Output file location is represented in the first column, while the calculated me
 Linguistic Metrics Analyzer was written in Java programming language by using Stanford CoreNLP Java framework for text processing.
 
 ### Stanford CoreNLP
-Stanford CoreNLP provides a set of natural language analysis tools. It can give the base forms of words, their parts of speech, indicate sentiment, extract particular or open-class relations between entity mentions etc. It was developped by The Stanford NLP Group which provides statistical NLP, deep learning NLP, and rule-based NLP tools for major computational linguistics problems, which can be incorporated into applications with human language technology needs.
+Stanford CoreNLP provides a set of natural language analysis tools. It can give the base forms of words, their parts of speech, indicate sentiment, extract particular or open-class relations between entity mentions etc. It was developped by The Stanford NLP Group which provides statistical NLP, deep learning NLP, and rule-based NLP tools for major computational linguistics problems, which can be incorporated into applications with human language technology needs. [2]
 
-Stanford CoreNLP’s goal is to make it very easy to apply a bunch of linguistic analysis tools to a piece of text. A tool pipeline can be run on a piece of plain text with just two lines of code. Stanford CoreNLP integrates many of Stanford’s NLP tools, including the part-of-speech (POS) tagger, the named entity recognizer (NER), the parser, the coreference resolution system, sentiment analysis, bootstrapped pattern learning, and the open information extraction tools.
+Stanford CoreNLP’s goal is to make it very easy to apply a bunch of linguistic analysis tools to a piece of text. A tool pipeline can be run on a piece of plain text with just two lines of code. Stanford CoreNLP integrates many of Stanford’s NLP tools, including the part-of-speech (POS) tagger, the named entity recognizer (NER), the parser, the coreference resolution system, sentiment analysis, bootstrapped pattern learning, and the open information extraction tools. [2]
 
-Using CoreNLP in this project enabled an easy parsing of sentences, identifying different parts of speech and many more things that were crucial in writing the code for all of the methods that calculate the wanted metrics. [2]
+Using CoreNLP in this project enabled an easy parsing of sentences, identifying different parts of speech and many more things that were crucial in writing the code for all of the methods that calculate the wanted metrics.
 
 ## Resume
 Linguistic Metrics Analyzer was developped in Java for a final project in Intelligent Systems class.
