@@ -62,4 +62,5 @@ Overall, LMA showed to be more precise in practice in analyzing text than SiNLP.
 ## References
 
 [1] Crossley, S. A., Allen, L. K., Kyle, K., & McNamara, D.S. (2014). *Analyzing discourse processing using a simple natural language processing tool (SiNLP). Discourse Processes, 51(5-6), pp. 511-534.*
+
 [2] https://stanfordnlp.github.io/CoreNLP/
