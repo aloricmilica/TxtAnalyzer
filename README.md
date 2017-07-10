@@ -1,20 +1,18 @@
 # Linguistic Metrics Analyzer - LMA
 ## Introduction
 The purpose of this final project was creating a software library which calculates the linguistic metrics of a textual file, such as
-the number of paraghraps, pronouns, negations, future etc. All in all, this application calculates all the metrics that can be calculated by Simple Natural Language Processing tool (SiNLP). The metrics which needed to be analyzed were determined based on the paper: *Crossley, S. A., Allen, L. K., Kyle, K., & McNamara, D.S. (2014). Analyzing discourse processing using a simple natural language processing tool (SiNLP). Discourse Processes, 51(5-6), pp. 511-534.2*. 
+the number of paraghraps, pronouns, negations, future etc. All in all, this application calculates all the metrics that can be calculated by Simple Natural Language Processing tool (SiNLP). The metrics which needed to be analyzed were determined based on the paper: [1]
 
 ## About SiNLP
 SiNLP is a software written in Python programming language which was a role-model for creating this project. It was developped by a group of researches with the support of the Institute for Education Sciences, in order to provide discourse researchers with an additional tool with which to identify and examine the mental representations and processes involved in the production and comprehension of language. 
 
 In order to analyze their text, users are first asked from SiNLP GUI to select a custom list dictionary. These custom lists allow users to create their own custom word lists to analyze texts specific to their research questions. Included with SiNLP is a starter custom list dictionary that includes determiners, demonstratives, all pronouns, first person pronouns, second person pronouns, third person pronouns, conjuncts, connectives, negations, and future. After selecting a list dictionary, users select the input (text) files through a file-dialog prompt, choose where they want the output file to be saved, and click a button to process the texts.
 
-SiNLP will also run without a custom list dictionary, and that way it will provide the name of each text processed, in addition to number of words, number of types, TTR, Letters per word, number of paragraphs, number of sentences, and number of words per sentence. After processing the texts, SiNLP saves a comma-separated values file (.csv) that can be opened in any spreadsheet software program. The output includes the filename for the text file analyzed and the calculated metrics.
+SiNLP will also run without a custom list dictionary, and that way it will provide the name of each text processed, in addition to number of words, number of types, TTR, Letters per word, number of paragraphs, number of sentences, and number of words per sentence. After processing the texts, SiNLP saves a comma-separated values file (.csv) that can be opened in any spreadsheet software program. The output includes the filename for the text file analyzed and the calculated metrics. [1]
 
 ## LMA - Software library for text metrics calculation
 ### Class Diagram
 ![alt text](https://github.com/aloricmilica/TxtAnalyzer/blob/master/src/main/resources/ClassDiagram.png "Class Diagram")
-
-Template Pattern was used as a solution to this problem, as it defines the operation algorithm sceleton while leaving some operation steps to be taken by subclasses. In this concrete case, Template Pattern defines the sceleton of calculate() method, while the steps of this algorithm (abstract methods) are redefined by subclasses - DefaultDictionaryCalc or CustomDictionaryCalc. This was done to differentiate the case when users want to run the calculation using a custom dictionary, from the case when they want to use a default one.
 
 When running the application, users are first required to input certain information about the .txt file they want to analyze and the results file: input file path, output folder path, output file name and optionally custom dictionary file path, before they click the button Calculate. When the calculate() method is called, each of the redefined abstract methods calculates a needed metric, so an object of Metrics class featuring these calculated values is created. In the end, the program assigns these metrics to a new Text class object and creates an output .csv file with information about output file location and all the calculated metrics.
 
@@ -51,7 +49,7 @@ Stanford CoreNLP provides a set of natural language analysis tools. It can give 
 
 Stanford CoreNLP’s goal is to make it very easy to apply a bunch of linguistic analysis tools to a piece of text. A tool pipeline can be run on a piece of plain text with just two lines of code. Stanford CoreNLP integrates many of Stanford’s NLP tools, including the part-of-speech (POS) tagger, the named entity recognizer (NER), the parser, the coreference resolution system, sentiment analysis, bootstrapped pattern learning, and the open information extraction tools.
 
-Using CoreNLP in this project enabled an easy parsing of sentences, identifying different parts of speech and many more things that were crucial in writing the code for all of the methods that calculate the wanted metrics.
+Using CoreNLP in this project enabled an easy parsing of sentences, identifying different parts of speech and many more things that were crucial in writing the code for all of the methods that calculate the wanted metrics. [2]
 
 ## Resume
 Linguistic Metrics Analyzer was developped in Java for a final project in Intelligent Systems class.
@@ -60,3 +58,8 @@ This software was built to accurately calculate various linguistic variables in 
 The application runs from a simplified GUI, where users first give several I/O information. Then, after clicking on the button *Calculate!*, user gets a message from the app about the outcome of the calculation process. Users can repeat this process and analyze as many text as they want, since the program will pop out a dialog box after every calculation asking if the user wants to analyze another text.
 
 Overall, LMA showed to be more precise in practice in analyzing text than SiNLP. However, there are always ways to optimize an application, so restructuring code in a smarter way and upgrading the graphical interface to a more appealing design wouldn't be a surplus.
+
+## References
+
+[1] Crossley, S. A., Allen, L. K., Kyle, K., & McNamara, D.S. (2014). *Analyzing discourse processing using a simple natural language processing tool (SiNLP). Discourse Processes, 51(5-6), pp. 511-534.*
+[2] https://stanfordnlp.github.io/CoreNLP/
