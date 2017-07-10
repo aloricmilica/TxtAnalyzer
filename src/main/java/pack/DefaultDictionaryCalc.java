@@ -45,7 +45,8 @@ public class DefaultDictionaryCalc extends AbstractCalculator {
         public DefaultDictionaryCalc(InputFileConfigurator ifc) throws FileNotFoundException, IOException {
             // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER, parsing
             Properties props = new Properties();
-	    props.setProperty("annotators","tokenize, ssplit, pos, lemma, parse");		    
+             props.put("annotators","tokenize, ssplit, pos, lemma, parse");
+            props.put("pos.model", "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger");
 	    StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
             //+depparse, regexner
             // reads text from the file
