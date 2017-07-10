@@ -50,7 +50,8 @@ public class CustomDictionaryCalc extends AbstractCalculator {
             // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER, parsing
             dictionary = new HashMap<String, String>();
             Properties props = new Properties();
-	    props.setProperty("annotators","tokenize, ssplit, pos, lemma, parse");		    
+            props.put("annotators","tokenize, ssplit, pos, lemma, parse");
+            props.put("pos.model", "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger");
 	    StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
             
             // reads text from the file
@@ -60,7 +61,7 @@ public class CustomDictionaryCalc extends AbstractCalculator {
             StringBuilder sb = new StringBuilder();
             
             
-            //posebna metoda sa dva 
+             
 	    while (s.hasNextLine()) {
                 String line = s.nextLine();
                 sb.append(line);
